@@ -4,6 +4,7 @@
 
     <article>
         <h2><%= course.title %></h2>
+        <span><%=image_tag course.image.url if course.image? %></span>
         <p><%= course.description %></p>
         
     </article>
