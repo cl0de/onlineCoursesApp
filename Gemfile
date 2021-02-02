@@ -19,6 +19,7 @@ gem 'webpacker', '~> 4.0'
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.7'
+
 # Administrate the admin systems
 #  gem 'administrate', '~> 0.14.0'
 # Easy upload management for ActiveRecord
