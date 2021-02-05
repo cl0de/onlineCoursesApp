@@ -63,5 +63,102 @@
     <% end %>    
   </div>
 </section>
+<section class="my-5">
+<div class="jumbotron jumbotron-fluid text-center recommendations text-light">
+  <h2 class="text-light">Get personal learning recommendations</h1>
+  <p class="lead">Answer few questions for your top picks </p>
+  <a class="btn btn-outline-light btn-lg" href="#" role="button">Get started</a>
+</div>
+</section>
+<section class="my-5">
+  <div class="row row-cols-1 row-cols-md-4">
+    <% @courses.each do |course| %>
+      <div class="col mb-4">
+        <div class="card h-100">
+          <%= image_tag course.image.url if course.image? %>
+          <div class="card-body">
+            <h5 class="card-title"><%= course.title %></h5>
+          </div>
+        </div>
+      </div>
+    <% end %>    
+  </div>
+</section>
+<section class="my-5">
+  <h2>Featured topics by category </h2>
+  <a class="btn btn-info btn-lg" href="#" role="button">Explore more</a>
+</section>
+<section class="my-5">
+  <div class="jumbotron instructors">
+    <div class="row row-cols-1 row-cols-md-2">
+    <div class="col mb-2">
+    <div class="card bg-dark text-white">
+      <img src="..." class="card-img" alt="...">
+      <div class="card-img-overlay">
+        <h2 class="card-title">Image goes here</h2>
+      </div>
+      </div>
+    </div>
+    <div class="col mb-2">
+    <div class="card bg-transparent border-0 ml-5">
+      <div class="card-body">
+        <h2 class="card-title text-left">Become an instructor</h2>
+        <p class="card-text">Top instructors from around the world teach millions of students on Udemy. We provide the tools and skills to teach what you love.</p>
+        <a href="#" class="btn btn-info">Start searching today</a>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="my-5">
+  <h2>Trusted by companies of all size </h2>
+  <a href="#">Company's names go here....</a>
+</section>
+<section class="my-5">
+<div class="jumbotron business">
+<div class="row row-cols-1 row-cols-md-2">
+  <div class="col mb-2">
+    <div class="card bg-transparent border-0 text-light">
+      <div class="card-body">
+        <h2 class="card-title text-left text-light">Udemy for Business</h2>
+        <p class="card-text">Get unlimited access to 5,000+ of Udemy’s top courses for your team.</p>
+        <a href="#" class="btn btn-info">Get Udemy for Business</a>
+      </div>
+    </div>
+    </div>
+    <div class="col mb-2">
+    <div class="card bg-dark text-white">
+      <img src="..." class="card-img" alt="...">
+      <div class="card-img-overlay">
+        <h2 class="card-title">Image goes here</h2>
+      </div>
+      </div>
+    </div>
+  
+  </div>
+</div>
+</section>
+<section class="my-5">
+<div class="jumbotron jumbotron-fluid border-top border-bottom border-dark bg-transparent">
+<div class="row row-cols-1 row-cols-md-2">
+  <div class="col mb-2">
+    <div class="card bg-transparent border-0">
+    <img src="..." class="card-img" alt="...">
+      <div class="card-img-overlay">
+        <h2 class="card-title text-left">Video goes here</h2>
+      </div>
+    </div>
+    </div>
+    <div class="col mb-2">
+    <div class="card border-0">
+      
+      <div class="card-body">
+        <h2 class="card-title">Transform your life through education</h2>
+        <p class="card-text">Mohamad Alaloush launched a new career in software development by taking courses on Udemy. What will you be able to do?</p>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
 
 

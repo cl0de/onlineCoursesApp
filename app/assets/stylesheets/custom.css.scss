@@ -5,7 +5,7 @@ $gray-medium-light: #eaeaea;
 $gray-light: #777;
 $gray-darker: #222;
 $gray: #555;
-
+$purple: #6f42c1;
 
 /* Universal */
 
@@ -19,9 +19,13 @@ textarea { resize: vertical;}
 
 h1, h2, h3, h4, h5, h6 { line-height: 1;}
 h1 { font-size: 3em; letter-spacing: -2px; margin-bottom: 30px; text-align: center;}
-h2 { font-size: 1.2em; letter-spacing: -1px; margin-bottom: 30px; text-align: center; font-weight: normal; color: $gray-light;}
+h2 { font-size: 2em; letter-spacing: -1px; margin-bottom: 30px; text-align: center; font-weight: normal; color: $gray-light;}
 p { font-size: 1.1em; line-height: 1.7em; }
 
+/* section */
+
+.recommendations { background-color: $purple; }
+.business { background-color: rgb(41, 73, 69);}
 /* footer */
 
 footer { margin-top: 45px; padding-top: 5px; border-top: 1px solid $gray-medium-light; color: $gray-light;
