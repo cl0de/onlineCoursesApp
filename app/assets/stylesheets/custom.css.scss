@@ -10,7 +10,7 @@ $gray: #555;
 /* Universal */
 
 html { overflow-y: scroll; }
-body { padding-top: 60px;}
+body { padding-top: 60px; }
 section { overflow: auto;}
 textarea { resize: vertical;}
 .center { text-align: center; h1 {margin-bottom: 10px;}}
@@ -44,9 +44,17 @@ footer { margin-top: 45px; padding-top: 5px; border-top: 1px solid $gray-medium-
 input, textarea, select, .uneditable-input {
     border: 1px solid #bbb;
     width: 100%;
-    // margin-bottom: 15px;
+    margin-bottom: 15px;
     @include box_sizing;
 }
 input {
     height: auto !important;
+}
+
+/* tab */
+
+.tab-bg {
+    background-color: pink;
+    margin-top: 10px;
+    padding-bottom: 15px;
 }

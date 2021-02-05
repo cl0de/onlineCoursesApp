@@ -1,0 +1,15 @@
+<div class="container">
+<div class="delete">
+    <h1>Delete Course</h1>
+    <br>
+    <%= form_for(@course, method: "delete") do |f| %>
+
+    <p class="alert alert-danger" role="alert" >Are you sure you want permenantly delete this course?</p>
+    <p><strong><%= @course.title %></strong></p>
+    <br>
+    <div class="form-buttons"><%= f.submit "Delete Course", class: "btn btn-primary" %></div>
+
+    <% end %>
+</div>
+<%= link_to "<< Back to list", courses_path, class: 'badge badge-primary Back-link' %>
+</div>

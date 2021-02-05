@@ -1,2 +1,22 @@
+<div class="container">
 
-<%=file_field :image %>
+<div class="course show">
+    <h1>Course</h1>
+    <br>                       
+    <table class="table table-bordered" summary="Course detail view">
+        <tr>
+            <th>Title</th>
+            <td><%= @course.title %></td>
+        </tr>
+        <tr>
+            <th>Description</th>
+            <td><%= @course.description %></td>
+        </tr>
+        <tr>
+            <th>Image</th>
+            <td><%= @course.image %></td>
+        </tr>
+    </table>
+</div>
+<p><%= link_to("<< Back to courses", courses_path, :class => 'badge badge-primary back-link') %></p>
+</div>

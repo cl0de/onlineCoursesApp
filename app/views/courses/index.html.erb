@@ -1,15 +1,30 @@
 
-
-
+<div class="container index">
 <h1>Courses</h1>
+    
+    <table class="listing table" summary='Course list'>
+        <thead>
+            <tr class='header'>
+                <th scope="col">Title</th>
+                <th scope="col">Image</th>
+                <th scope="col">Description</th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
 
-<% @courses.each do |course| %>
+        <% @courses.each do |course| %>
 
-    <article>
-        <h2><%= course.title %></h2>
-        <span><%=image_tag course.image.url if course.image? %></span>
-        <p><%= course.description %></p>
-        
-    </article>
-    <hr>
-<% end %>
+        <tr>
+            <td><%= course.title %></td>
+            <td><%=image_tag course.image.url if course.image? %></td>
+            <td><%= course.description %></td>
+            <td class="actions">
+                <%= link_to "Show", course_path(course) %>
+                <%= link_to "Edit", edit_course_path(course) %>
+                <%= link_to "Delete", delete_course_path(course) %>
+            </td>
+        </tr>
+        <% end %>
+    </table>
+</div>
+<p><%= link_to "Add New Course", new_course_path, class: 'badge badge-primary action new' %></p>

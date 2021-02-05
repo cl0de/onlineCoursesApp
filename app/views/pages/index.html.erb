@@ -1,6 +1,6 @@
 
-<div class="jumbotron jumbotron-fluid">
-    <h1 class="display-4">Welcome to our online courses platform. The world's largest selection of courses.</h1>
+<div class="center jumbotron jumbotron-fluid">
+    <h1 class="display-4">Welcome to our online courses platform. </h1>
         <div class="container">
             <p class="lead">Learn the latest skills to reach your professional goals!</p>
             <hr class="my-4">
@@ -40,7 +40,7 @@
     <a class="nav-link" id="contact-tab" data-toggle="tab" href="#php" role="tab" aria-controls="contact" aria-selected="false">PHP</a>
   </li>
 </ul>
-<div class="tab-content" id="myTabContent">
+<div class="tab-content tab-bg" id="myTabContent">
   <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">Placeholder content for the tab panel. This one relates to the home tab. Takes you miles high, so high, 'cause she’s got that one international smile. There's a stranger in my bed, there's a pounding in my head. Oh, no. In another life I would make you stay. ‘Cause I, I’m capable of anything. Suiting up for my crowning battle. Used to steal your parents' liquor and climb to the roof. Tone, tan fit and ready, turn it up cause its gettin' heavy. Her love is like a drug. I guess that I forgot I had a choice.</div>
   <div class="tab-pane fade" id="python" role="tabpanel" aria-labelledby="profile-tab">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a sem sed ipsum hendrerit blandit hendrerit at velit. Nullam congue enim eget nisl vestibulum scelerisque. Phasellus pharetra neque vitae finibus eleifend. Aenean id enim varius, scelerisque ipsum id, condimentum nibh. Proin sit amet volutpat orci. Sed leo leo, viverra at mollis ac, venenatis sed magna. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas</div>
   <div class="tab-pane fade" id="javascript" role="tabpanel" aria-labelledby="contact-tab">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a sem sed ipsum hendrerit blandit hendrerit at velit. Nullam congue enim eget nisl vestibulum scelerisque. Phasellus pharetra neque vitae finibus eleifend. Aenean id enim varius, scelerisque ipsum id, condimentum nibh. Proin sit amet volutpat orci. Sed leo leo, viverra at mollis ac, venenatis sed magna. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</div>
@@ -48,5 +48,20 @@
   <div class="tab-pane fade" id="php" role="tabpanel" aria-labelledby="contact-tab">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a sem sed ipsum hendrerit blandit hendrerit at velit. Nullam congue enim eget nisl vestibulum scelerisque. Phasellus pharetra neque vitae finibus eleifend. Aenean id enim varius, scelerisque ipsum id, condimentum nibh. Proin sit amet volutpat orci. Sed leo leo, viverra at mollis ac, venenatis sed magna. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</div>
 </div>
 </article>
+<section class="my-5">
+  <div class="row row-cols-1 row-cols-md-4">
+    <% @courses.each do |course| %>
+      <div class="col mb-4">
+        <div class="card h-100">
+          <%= image_tag course.image.url if course.image? %>
+          <div class="card-body">
+            <h5 class="card-title"><%= course.title %></h5>
+            <p class="card-text"><%= course.description.truncate(70) %></p>
+          </div>
+        </div>
+      </div>
+    <% end %>    
+  </div>
+</section>
 
 
