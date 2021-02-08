@@ -8,7 +8,7 @@ $gray: #555;
 $purple: #6f42c1;
 
 /* Universal */
-
+html, body { height: 100%;}
 html { overflow-y: scroll; }
 body { padding-top: 60px; }
 section { overflow: auto;}
@@ -28,12 +28,13 @@ p { font-size: 1.1em; line-height: 1.7em; }
 .business { background-color: rgb(41, 73, 69);}
 /* footer */
 
-footer { margin-top: 45px; padding-top: 5px; border-top: 1px solid $gray-medium-light; color: $gray-light;
-        a {color: $gray; &:hover { color: $gray-darker;}}
-        small { float: left; margin-left: 15px;}
-        .nav { float: right; list-style: none;}}
+ .footer { height: 200px; margin-top: 45px; padding-top: 5px; border-top: 1px solid $gray-medium-light; color: $gray-light;}
+ footer > div > div > a { color: $gray; &:hover { color: $gray-darker;}}
+ 
+ small { float: left; margin-left: 15px; a {color: $gray;}}
 
-.nav-footer { margin-right: 15px;}
+
+// .nav-footer { margin-right: 15px;}
 
 /* mixins, variables, etc. */
 
