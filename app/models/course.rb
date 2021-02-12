@@ -1,5 +1,6 @@
 class Course < ApplicationRecord
      
+    has_many :episodes, class_name: "episode", foreign_key: "reference_id", dependent: :destroy
     mount_uploader :image, ImageUploader
 
     validate :image_size

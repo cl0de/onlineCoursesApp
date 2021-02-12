@@ -5,6 +5,10 @@ class CoursesController < ApplicationController
 
   def show
     @course = Course.find(params[:id]) 
+
+    # if @courset.nil 
+    #   redirect_to root_path
+    # end
   end
 
   def new
