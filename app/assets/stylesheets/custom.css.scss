@@ -14,8 +14,9 @@ body { padding-top: 60px;}
 section { overflow: auto;}
 textarea { resize: vertical;}
 .center { text-align: center; h1 {margin-bottom: 10px;}}
-// .main-container {
-//     max-width: 1900px;
+// .container-fluid {
+//     margin: 5px 40px 0 40px;
+    
 // }
 
 /* typography */
@@ -31,11 +32,12 @@ section { overflow: hidden;}
 .recommendations { background-color: $purple; }
 .business { background-color: rgb(41, 73, 69);}
 /* footer */
-
- .footer { height: 200px; margin-top: 45px; padding-top: 5px; border-top: 1px solid $gray-medium-light; color: $gray-light;}
- footer > div > div > a { color: $gray; &:hover { color: $gray-darker;}}
+  
+footer {  height: 300px; background-color: $gray-light;}
+ .footer { margin-top: 45px; padding: 25px; border-top: 1px solid $gray-medium-light; color: rgb(70, 153, 128);}
+ footer > div > div > a { color: white; &:hover { color: $gray-darker;}}
  
- small { float: left; margin-left: 15px; a {color: $gray;}}
+ small {float: right; margin-right: 15px; a {color: white;}}
 
 
 // .nav-footer { margin-right: 15px;}

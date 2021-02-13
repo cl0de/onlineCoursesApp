@@ -9,8 +9,6 @@ class EpisodesController < ApplicationController
   # GET /episodes/1
   def show
     @episode = Episode.find(params[:id])
-    # @episodes = Episode.where(course_id: @course.course_id)
-    # @episodes = Episode.all
   end
 
   # GET /episodes/new
