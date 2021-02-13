@@ -8,6 +8,9 @@ class EpisodesController < ApplicationController
 
   # GET /episodes/1
   def show
+    @episode = Episode.find(params[:id])
+    # @episodes = Episode.where(course_id: @course.course_id)
+    # @episodes = Episode.all
   end
 
   # GET /episodes/new
@@ -17,28 +20,23 @@ class EpisodesController < ApplicationController
 
   # GET /episodes/1/edit
   def edit
+    @episode = Episode.find(params[:id])
   end
 
   # POST /episodes
   def create
     @episode = Episode.new(episode_params)
-
-    
       if @episode.save
         redirect_to @episode, notice: "Episode was successfully created." 
       else
-        render :new, status: :unprocessable_entity 
+        render :new
       end
-    end
   end
-
-  # PATCH/PUT /episodes/1 
   def update
-      if @episode.update(episode_params)
-         redirect_to @episode, notice: "Episode was successfully updated." 
-      else
-         render :edit, status: :unprocessable_entity 
-      end
+    if @episode.update(episode_params)
+      redirect_to @episode, notice: "Episode was successfully updated." 
+    else
+      render :edit, status: :unprocessable_entity 
     end
   end
 
@@ -46,17 +44,16 @@ class EpisodesController < ApplicationController
   def destroy
     @episode.destroy
       redirect_to episodes_url, notice: "Episode was successfully destroyed." 
-    end
   end
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_episode
-      @episode = Episode.find(params[:id])
-    end
+    # def set_episode
+    #   @episode = Episode.find(params[:id])
+    # end
 
     # Only allow a list of trusted parameters through.
     def episode_params
-      params.fetch(:episode, {})
+      params.require(:episode).permit(:course_id, :title, :description, :order, :video_link)
     end
 end

@@ -1,5 +1,23 @@
+<% provide(:title, "New Episode") %>
 <h1>New Episode</h1>
+<p><%= link_to 'Back', episodes_path %></p>
+<div class="row">
+    <div class="col-md-6 offset-md-3">
+        <%= form_for @episode do |f| %>
+            <%= render partial: 'form', locals: {f: f}  %> 
+            <%= f.submit "Create Episode", class: "btn btn-primary" %>
+        <% end %>
+    </div>
+    
+</div>
 
-<%= render 'form', episode: @episode %>
 
-<%= link_to 'Back', episodes_path %>
+
+
+
+
+
+
+
+
+

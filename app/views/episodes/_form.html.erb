@@ -1,17 +1,10 @@
-<%= form_with(model: episode, local: true) do |form| %>
-  <% if episode.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(episode.errors.count, "error") %> prohibited this episode from being saved:</h2>
-
-      <ul>
-        <% episode.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
+<%= f.label :course %>
+<%= f.text_field :course_id %>
+<%= f.label :title %>
+<%= f.text_field :title%>
+<%= f.label :description %>
+<%= f.text_area :description %>
+<%= f.label :order %>
+<%= f.number_field :order%>
+<%= f.label :video_link %>
+<%= f.text_field :video_link%>

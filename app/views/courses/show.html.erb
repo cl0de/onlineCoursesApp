@@ -5,13 +5,14 @@
         <br>   
         <p><%= @course.description %></p>
         <br>
-        <section>
+        <section> 
             <h2>Course content</h2>
+            <ol>
             <% @course.episodes.each do |episode| %>
-                <h3><%= episode.title %></h3>
+                <li><h3><%= episode.title %></h3></li>
                 <p><%= episode.description %></p>
             <% end %>
+            </ol>
         </section>
     </div>
-
 </div>

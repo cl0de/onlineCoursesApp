@@ -1,4 +1,23 @@
-<p id="notice"><%= notice %></p>
+<%# <p id="notice"><%= notice %>
+<div class="container">
+    <div class="episode show">
 
+        <h1><%= @episode.course.title  %></h1>
+        <br>   
+        <p><%= @episode.course.description %></p>
+        <br> 
+        <section> 
+            <h2>Course content</h2>
+            
+                <%# <% @episodes.each do |e| %>  
+                    <%# <% if e.course_id == course_id %>  
+                        <%# <h3><%= e.id %>
+                        <%# <%= e.title %>
+                        <%# <p><%= e.description %>
+                    <%# <% end %> 
+                <%# <% end %>
+        </section>
+    </div>
+</div>
 <%= link_to 'Edit', edit_episode_path(@episode) %> |
 <%= link_to 'Back', episodes_path %>
