@@ -4,6 +4,7 @@ class EpisodesController < ApplicationController
   # GET /episodes
   def index
     @episodes = Episode.all
+    # @episodes = Episode.find_by(course_id: @course)
   end
 
   # GET /episodes/1
@@ -31,6 +32,7 @@ class EpisodesController < ApplicationController
       end
   end
   def update
+    @episode = Episode.find(params[:id])
     if @episode.update(episode_params)
       redirect_to @episode, notice: "Episode was successfully updated." 
     else

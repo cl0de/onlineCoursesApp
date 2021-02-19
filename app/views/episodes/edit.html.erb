@@ -1,6 +1,18 @@
-<h1>Editing Episode</h1>
-
-<%= render 'form', episode: @episode %>
-
-<%= link_to 'Show', @episode %> |
-<%= link_to 'Back', episodes_path %>
+<% provide(title: "Edit Episode") %>
+<div class="container">
+    <h1>Update Episode</h1>
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <%= form_for(@episode) do |f| %>
+            <%= render partial: 'form',  :locals =>{:f => f}  %>
+            <div class="form-buttons">
+                <%= f.submit "Save changes", class: "btn btn-primary" %>
+            </div>
+            <div>
+                <%= link_to 'Show', @episode %> |
+                <%= link_to 'Back', episodes_path %>
+            </div>
+            <% end %>
+        </div>
+    </div>
+</div>

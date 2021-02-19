@@ -14,10 +14,12 @@ body { padding-top: 60px;}
 section { overflow: auto;}
 textarea { resize: vertical;}
 .center { text-align: center; h1 {margin-bottom: 10px;}}
-// .container-fluid {
-//     margin: 5px 40px 0 40px;
-    
-// }
+
+/* layout */
+
+* {
+  box-sizing: border-box;
+}
 
 /* typography */
 
@@ -26,20 +28,33 @@ h1 { font-size: 3em; letter-spacing: -2px; margin-bottom: 30px; text-align: cent
 h2 { font-size: 2em; letter-spacing: -1px; margin-bottom: 30px; text-align: center; font-weight: normal; color: $gray-light;}
 p { font-size: 1.1em; line-height: 1.7em;  font-family: 'Roboto', sans-serif;}
 
+
 /* section */
 
 section { overflow: hidden;}
+.courses {margin: 1em; padding: 0 8px;}
 .recommendations { background-color: $purple; }
 .business { background-color: rgb(41, 73, 69);}
+.avatar {width: 100px; height: 100px; background-color: $gray-light; margin: 0 auto;}
+
+#course { width: 20%;}
+
+/* images*/
+
+// img { max-width: 100%; display: block; object-fit: cover; } 
+// .section-image { width: 100px;}
+.card-img-top {height: 200px;  object-fit: cover; border: 1px solid $gray-medium-light;}
+
 /* footer */
   
-footer {  height: 300px; background-color: $gray-light;}
- .footer { margin-top: 45px; padding: 25px; border-top: 1px solid $gray-medium-light; color: rgb(70, 153, 128);}
- footer > div > div > a { color: white; &:hover { color: $gray-darker;}}
- 
- small {float: right; margin-right: 15px; a {color: white;}}
+.footer {height: 400px; margin-top: 45px; padding: 20px ; color: $gray-medium-light; background-color: $gray-light;}
+footer > div > div > a {color: $gray-medium-light; &:hover { color: $gray-darker;}}
+small {text-align: center; a {color: $gray-darker;}}
+.copy {border-top: 1px solid #ccc; padding: 20px 0 0 0; margin-top: 60px;}
 
 
+.course-card {width: 20rem; object-fit: contain;}
+.flex-items {border-top: 1px solid $gray-medium-light; margin: 10px; line-height: 75px;}
 // .nav-footer { margin-right: 15px;}
 
 /* mixins, variables, etc. */
@@ -62,47 +77,3 @@ input {
     height: auto !important;
 }
 
-/* tab */
-
-.tab-bg {
-    background-color: pink;
-    margin-top: 10px;
-    padding-bottom: 15px;
-}
-
-/* Style the tab */
-.tab {
-    overflow: hidden;
-    border: 1px solid #ccc;
-    background-color: #f1f1f1;
-  }
-  
-  /* Style the buttons inside the tab */
-  .tab button {
-    background-color: inherit;
-    float: left;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 14px 16px;
-    transition: 0.3s;
-    font-size: 17px;
-  }
-  
-  /* Change background color of buttons on hover */
-  .tab button:hover {
-    background-color: #ddd;
-  }
-  
-  /* Create an active/current tablink class */
-  .tab button.active {
-    background-color: #ccc;
-  }
-  
-  /* Style the tab content */
-  .tabcontent {
-    display: none;
-    padding: 6px 12px;
-    border: 1px solid #ccc;
-    border-top: none;
-  }

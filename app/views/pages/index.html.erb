@@ -1,7 +1,7 @@
-<div class="center jumbotron jumbotron-fluid bg-info text-white">
+<div class="jumbotron jumbotron-fluid bg-info text-white">
   <h1 class="display-4">Welcome to our online courses platform </h1>
+  <p class=" center lead">Learn the latest skills to reach your professional goals!</p>
   <div class="container">
-    <p class="lead">Learn the latest skills to reach your professional goals!</p>
     <hr class="my-4">
     <div class="card text-info" style="width: 24rem;">
       <div class="card-body">
@@ -29,23 +29,24 @@
   <p class="center mb-5">Choose from 130,000 online video courses with new additions published every month</p>
 </article>
 
-<section class="my-5 py-4">
-  <% @courses.in_groups_of(4,false).each do |group| %>
-  <div class="row row-cols-1 row-cols-md-4">
+<section class="courses my-5 py-4">
+  <% @courses.in_groups_of(6,false).each do |group| %>
+  <div class="row row-cols-1 row-cols-md-6" >
     <% group.each do |course| %>
       <div class="col mb-4">
-        <div class="card h-100">
-          <%= image_tag course.image.url if course.image? %>
+        <div class="card border-0 course-card">
+          <%= image_for(course) %>
           <div class="card-body">
             <h5 class="card-title"><%= link_to course.title, course_path(course) %></h5>
             <p class="card-text"><%= course.description.truncate(70) %></p>
-          </div>
+          </div> 
         </div>
       </div>
       <% end %>    
   </div>
-  <% end %>
+<% end %> 
 </section>
+
     <section class="my-5">
       <div class="jumbotron jumbotron-fluid text-center recommendations text-light">
         <h2 class="text-light">Get personal learning recommendations</h1>
@@ -54,10 +55,27 @@
       </div>
     </section>
 
-    <section class="my-5">
-      <h2>Featured topics by category </h2>
-      <a class="btn btn-info btn-lg" href="#" role="button">Explore more</a>
-    </section>
+<section class="my-5">
+  <%# <div class="container"> %>
+    <h2>Featured topics by category </h2>
+      <h3 class="center">(<%=@courses.count%>) Courses available</h3>
+        <% @courses.in_groups_of(6,false).each do |group| %>
+          <dl class="" >
+            <div class="m-3 d-flex flex-row" >
+              <% group.each do |c| %>
+                <div class="m-2" id="course">
+                  <h4><%= c.title if c.title %></h4>
+                    <% c.episodes.each do |e|%>
+                      <dd Class="p-2 flex-fill"> <%= e.title %></dd>
+                    <% end %>
+                </div>
+              <% end %>
+            </div>
+          </dl>
+        <% end %> 
+        <a class="btn btn-info btn-lg m-3" href="#" role="button">Explore more</a>
+  <%# </div> %>
+</section>
     <section class="my-5">
       <div class="jumbotron instructors">
         <div class="row row-cols-1 row-cols-md-2">
@@ -80,8 +98,46 @@
       </div>
     </section>
     <section class="my-5">
-      <h2>Trusted by companies of all size </h2>
-      <a href="#">Company's names go here....</a>
+      <h2>Your testimonies</h2>
+      <div class="row row-cols-1 row-cols-md-3">
+        <div class="col mb-4">
+          <div class="card border-0">
+            <div class="card-body text-center">
+              <img class="avatar rounded-circle" src="..." alt="Image">
+              <h5 class="card-title">Robert Downey Jr.</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Famous Actor</h6>
+              <p class="card-text">"Robert John Downey Jr.'career has included critical and popular success in his youth, followed by a period of substance abuse and legal difficulties, and a resurgence of commercial success in middle age."</p>
+              <a href="#" class="btn btn-info">Follow</a>
+              <a href="#" class="btn btn-outline-info">Message</a>
+            </div>
+          </div>
+        </div>
+        <div class="col mb-4">
+          <div class="card border-0">
+            <div class="card-body text-center">
+              <img class="avatar rounded-circle" src="..." alt="Image">
+              <h5 class="card-title">Robert Downey Jr.</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Famous Actor</h6>
+              <p class="card-text">"Robert John Downey Jr.'career has included critical and popular success in his youth, followed by a period of substance abuse and legal difficulties, and a resurgence of commercial success in middle age."</p>
+              <a href="#" class="btn btn-info">Follow</a>
+              <a href="#" class="btn btn-outline-info">Message</a>
+            </div> 
+          </div>
+        </div>
+        <div class="col mb-4">
+          <div class="card border-0">
+            <div class="card-body text-center">
+              <img class="avatar rounded-circle" src="..." alt="Image">
+              <h5 class="card-title">Robert Downey Jr.</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Famous Actor</h6>
+              <p class="card-text">"Robert John Downey Jr.'career has included critical and popular success in his youth, followed by a period of substance abuse and legal difficulties, and a resurgence of commercial success in middle age."</p>
+              <a href="#" class="btn btn-info">Follow</a>
+              <a href="#" class="btn btn-outline-info">Message</a>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
     </section>
 
     <section class="my-5">

@@ -14,16 +14,16 @@
 
         <% @courses.each do |course| %>
 
-        <tr>
-            <td><%= course.title %></td>
-            <td><%=image_tag course.image.url if course.image? %></td>
-            <td><%= course.description %></td>
-            <td class="actions">
-                <%= link_to "Show", course_path(course) %>
-                <%= link_to "Edit", edit_course_path(course) %>
-                <%= link_to "Delete", delete_course_path(course) %>
-            </td>
-        </tr>
+            <tr>
+                <td><%= course.title %></td>
+                <td><%= image_for(course) %></td>
+                <td><%= course.description %></td>
+                <td class="actions">
+                    <%= link_to "Show", course_path(course) %>
+                    <%= link_to "Edit", edit_course_path(course) %>
+                    <%= link_to "Delete", delete_course_path(course) %>
+                </td>
+            </tr>
         <% end %>
     </table>
 </div>
